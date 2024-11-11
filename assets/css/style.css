@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
 
 /*Asterix wildcard selector to override default styles added by the browser*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -38,7 +38,7 @@ header {
 
 header {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 h1 {
@@ -49,20 +49,21 @@ h1 {
 }
 
 #menu {
-font-size: 110%;
-letter-spacing: 4px;
-list-style-type: none;
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
 }
- #menu > li {
- margin-bottom: 1em;
- }
 
- .active {
+#menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
     border-bottom: 1px #3a3a3a;
- }
+}
 
- /*Navbar styles with dropdown toggle*/
- nav {
+/*Navbar styles with dropdown toggle*/
+nav {
     position: absolute;
     background-color: #fff;
     width: 100%;
@@ -71,16 +72,17 @@ list-style-type: none;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
- }
+}
 
- /*Nav Toggle*/
+/*Nav Toggle*/
 #nav-toggle:checked~nav {
-    display: block; 
+    display: block;
 }
 
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
@@ -103,6 +105,7 @@ footer {
 /*Media query: tablets and larger (768px and up)*/
 
 @media screen and (min-width: 768px) {
+
     /*Header*/
     nav {
         display: block;
@@ -111,15 +114,28 @@ footer {
         width: fit-content;
         padding-right: 1rem;
     }
-    #menu  {
+
+    #menu {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
     .nav-toggle-label {
         display: none;
+    }
+
+    #logo {
+        font-size: 200%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+    /*Main Content*/
+    main {
+    /*push main content down to accomodate larger header*/
+    margin-top: 79px;
+
     }
 }
